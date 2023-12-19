@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FruitsApi", "FruitsApi\FruitsApi.csproj", "{D17B3E07-B21D-47FD-9BD2-13754E77BB0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D17B3E07-B21D-47FD-9BD2-13754E77BB0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17B3E07-B21D-47FD-9BD2-13754E77BB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17B3E07-B21D-47FD-9BD2-13754E77BB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17B3E07-B21D-47FD-9BD2-13754E77BB0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8543A35F-31E9-4AC5-8A8E-65EB19FA8920}
+	EndGlobalSection
+EndGlobal

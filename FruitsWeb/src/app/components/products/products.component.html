@@ -1,0 +1,33 @@
+    <div class="container text-center mx-auto my-5" id="gallery">
+      <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-lg-3 products" *ngFor="let product of products">
+          <div class="card mb-4" >
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+              <img [src]="'assets/' + product.image" class="img-fluid" style="height: 200px; object-fit: cover;" />
+              <a class="nav-link" (click)="goToProductDetails(product.id)" style="cursor: pointer;">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+          </div>
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold"><a>{{product.name}}</a></h5>
+              <ul class="list-unstyled list-inline mb-0">
+                <li class="list-inline-item me-0" *ngFor="let star of [1, 2, 3, 4, 5]">
+                  <i class="fas fa-star text-warning fa-xs" [ngClass]="{'fas fa-star-half-alt': star - 0.5 === product.rating || star <= product.rating}"></i>
+                </li>
+                <li class="list-inline-item">
+                  <p class="text-muted">{{product.rating}}</p>
+                </li>
+              </ul>
+              <!-- conver the price to kenyan shilling -->
+              <p class="card-text">
+                {{product.price | currency:'KES'}}
+              </p>
+              <p class="card-text">
+                {{product.description || 'No description available'}}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+

@@ -1,0 +1,15 @@
+.pick{
+  /* background-color: #2d7a12; */
+  background-image: url("../../../assets/images/christmas-ball-8378074.jpg");
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding: 10px;
+  text-align: center;
+  font-size: 3rem;
+  font-family: cursive;
+  color: white;
+  font-weight: bold;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}

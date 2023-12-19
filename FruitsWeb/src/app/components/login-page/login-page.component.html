@@ -1,0 +1,23 @@
+<div class="login-container">
+  <h1>Hi, Welcome Back</h1>
+  <p-toast position="top-right"></p-toast>
+  <!-- <p-progressSpinner></p-progressSpinner> -->
+  <form class="login-form" [formGroup]="loginForm" (ngSubmit)="login()" novalidate autocomplete="false">
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input [ngClass]="{'is-danger': displayMessage['email']}" formControlName="email" required type="email" class="input is-medium" placeholder="Enter your email">
+      <p *ngIf="displayMessage['email']" class="help is-danger">
+        {{ displayMessage['email'] }}
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input [ngClass]="{'is-danger': displayMessage['password']}" formControlName="password" type="password" placeholder="Enter your password">
+      <p *ngIf="displayMessage['password']" class="help is-danger">
+        {{ displayMessage['password'] }}
+      </p>
+    </div>
+    <button type="submit" class="button is-block is-primary is-fullwidth is-medium" [disabled]="loginForm.invalid">Submit</button>
+    <span>Don't have an account? <a routerLink="/signUp">Sign Up</a></span>
+  </form>
+</div>

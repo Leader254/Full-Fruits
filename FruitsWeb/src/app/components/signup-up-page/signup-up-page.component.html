@@ -1,0 +1,42 @@
+<div class="signup-container">
+  <h3>Create An Account</h3>
+  <form class="signup-form" [formGroup]="signUpForm" (ngSubmit)="signUp()" novalidate>
+      <div class="form-group">
+          <label for="email">Email</label>
+          <input [ngClass]="{'is-danger': displayMessage['email']}" formControlName="email" type="email" required placeholder="Enter your email">
+          <p *ngIf="displayMessage['email']" class="help is-danger">
+            {{ displayMessage['email'] }}
+          </p>
+      </div>
+      <div class="form-group">
+        <label for="firstname">FirstName</label>
+        <input [ngClass]="{'is-danger': displayMessage['firstName']}" formControlName="firstName" class="input is-medium" type="firstname" placeholder="First Name">
+          <p *ngIf="displayMessage['firstName']" class="help is-danger">
+            {{ displayMessage['firstName'] }}
+          </p>
+      </div>
+      <div class="form-group">
+        <label for="lastname">LastName</label>
+        <input [ngClass]="{'is-danger': displayMessage['lastName']}" formControlName="lastName" class="input is-medium" type="lastname" placeholder="Last Name">
+        <p *ngIf="displayMessage['lastName']" class="help is-danger">
+          {{ displayMessage['lastName'] }}
+        </p>
+      </div>
+      <div class="form-group">
+          <label for="password">Password</label>
+          <input [ngClass]="{'is-danger': displayMessage['password'] || displayMessage['confirmPassword'] }" formControlName="password" type="password" placeholder="Enter your password">
+          <p *ngIf="displayMessage['password']" class="help is-danger">
+            {{ displayMessage['password'] }}
+          </p>
+      </div>
+      <div class="form-group">
+        <label for="confirmpassword">Confrim Password</label>
+        <input [ngClass]="{'is-danger': displayMessage['confirmPassword']}" formControlName="confirmPassword" type="password" placeholder="Confirm Password">
+        <p *ngIf="displayMessage['confirmPassword']" class="help is-danger">
+          {{ displayMessage['confirmPassword'] }}
+        </p>
+      </div>
+      <button type="submit" class="button is-block is-primary is-fullwidth is-medium" [disabled]="signUpForm.invalid">Submit</button>
+      <span>Already have an account? <a routerLink="/login">Login</a></span>
+  </form>
+</div>

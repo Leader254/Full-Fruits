@@ -1,0 +1,14 @@
+.navbar-toggler {
+  border: 2px solid white;
+}
+nav{
+  background-image: url("../assets/images/christmas-3023415_1920.jpg");
+}
+
+.img-overlay {
+  position: absolute;
+  right: -10px;
+  top: -4px;
+  width: 60px;
+  height: auto;
+}
